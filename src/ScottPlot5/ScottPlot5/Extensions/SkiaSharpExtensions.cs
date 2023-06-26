@@ -99,6 +99,7 @@ public static class SkiaSharpExtensions
         paint.TextSize = fontStyle.Size;
         paint.Color = fontStyle.Color.ToSKColor();
         paint.IsAntialias = fontStyle.AntiAlias;
+        paint.TextAlign = fontStyle.TextAlign;
     }
 
     public static SKPathEffect? GetPathEffect(this LinePattern pattern)

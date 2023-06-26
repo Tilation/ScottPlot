@@ -12,4 +12,5 @@ public class FontStyle
     public bool Bold { get; set; } = false;
     public bool Italic { get; set; } = false;
     public bool AntiAlias { get; set; } = true;
+    public SKTextAlign TextAlign { get; set; }
 }

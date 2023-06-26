@@ -207,4 +207,12 @@ public class AddPlottable
         Plot.Plottables.Add(rangePlot);
         return rangePlot;
     }
+
+    public FloatingMarkers FloatingMarkers<T>(ICollection<T> data, Func<T, Marker> getMarker)
+    {
+        var markers = new FloatingMarkers();
+        markers.SetDataSource(data, x => getMarker(x));
+        Plot.Plottables.Add(markers);
+        return markers;
+    }
 }
